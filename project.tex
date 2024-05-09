@@ -1,0 +1,505 @@
+%% This is file `elsarticle-template-1-num.tex',
+%%
+%% Copyright 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%%
+%% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
+%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
+%%
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[multiple]{footmisc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{authblk}
+%% The graphicx package provides the includegraphics command.
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{tocloft}
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{comment}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, citecolor=black}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm}
+
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+\usepackage[authoryear]{natbib}
+\renewcommand{\bibname}{References}
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+%\journal{Energy Policy}
+
+%\newcommand{\footremember}[2]{%
+%	\footnote{#2}
+%	\newcounter{#1}
+%	\setcounter{#1}{\value{footnote}}%
+%}
+
+%\newcommand{\footrecall}[1]{%
+%	\footnotemark[\value{#1}]%
+%} 
+%% Title, authors and addresses
+
+
+\title{ \large{International Research Experience Program (JIREP)} \\ \vspace{1 em} \normalsize{Project name:}  \\ \LARGE{Geomagnetic Regional Response during Geomagnetic Storm Periods}}
+
+\author{%
+	\textbf{Carlos Isaac Castellanos-Velazco} \\ PhD student \\ \vspace{1 em} Instituto de Geofísica Unidad Michoacán, \\
+	Universinad Nacional Autónoma de México
+}
+
+
+
+\date{}
+
+\begin{document}
+\maketitle
+%\begin{frontmatter}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \address[label1]{}
+%% \address[label2]{}
+
+
+%\author[rvt]{Carlos Isaac Castellanos Velazco\corref{cor1}\fnref{fn1,fn2}}
+%\ead{ccastellanos@igeofisica.unam.mx}
+%\author[rvt]{ Pedro Corona Romero \fnref{fn2, fn3}}
+%\ead{p.coronaromero@igeofisica.unam.mx }
+
+%%\author[els]{E.O.~Pamplona\corref{cor2}\fnref{fn1,fn3}}
+%%\ead[url]{pamplona@unifei.edu.br}
+%\cortext[cor1]{Corresponding author}
+%\cortext[cor2]{Principal corresponding author}
+%\fntext[fn1]{Posgrado en Ciencias de la Tierra, Universidad Nacional Aut\'onoma de M\'exico}
+%\fntext[fn2]{IGUM - Instituto de Geofisica, Unidad Michoacan}
+%\fntext[fn3]{LANCE - Laboratorio Nacional de Clima Espacial}
+
+
+%\address[rvt]{Antigua Carretera a P\'atzcuaro 8701, Michoacan Mexico}
+
+%\tnotetext[t1]{The authors would like to thank Jicamarca Observatory for financially supporting this research.}
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+\section*{Summary}
+%% Text of abstract
+%El estudio de la respuesta geomagnética en escala regional es importante para poder entender mejor las dinámicas que conducen a diversos efectos negativos asociados con el clima espacial. En este proyecto, se busca estudiar y entender la variabilidad de la respuesta geomagnética regional durante periodos de tormenta geomagnética (TGM). En estudios previos, se consiguió identificar la respuesta geomagnética asociada a corrientes ionosféricas durante TGM para una región en latidud media-baja. Lo que se busca ahora, es el de realizar el experimento en una región de latitud ecuatorial, donde las contribuciones ionosféricas y magnetosféricas pueden variar de forma significativa. Tal estudio se plantea a partir de usar los datos magnéticos proporcionados por la red de magnetómetros adscrita al Instituto de Geofísica del Perú (IGP). 
+The investigation of geomagnetic responses at a regional level is crucial for a deeper comprehension of the dynamics underlying various adverse effects linked to space weather. This project aims to explore and comprehend the regional geomagnetic response's variability during geomagnetic storm (GMS) occurrences. Previous research successfully identified the geomagnetic response correlated with ionospheric currents during transitional geomagnetic storms in a medium-low latitude region. The current endeavor seeks to replicate this experiment in an equatorial latitude region, where ionospheric and magnetospheric influences may exhibit significant variations. This study is proposed to utilize magnetic data sourced from the magnetometer network established by the Instituto de Geofísica del Perú (IGP).
+
+
+%\begin{keyword}
+%Geomagnetic Storms \sep Regional Geomagnetic Field \sep Local Response \sep Magnetospheric Currents \sep Ionospheric Currents.
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+%\end{keyword}
+
+%\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+
+%% main text
+
+
+\section{Introduction}
+\label{S:1}
+
+\subsection{Motivation}
+%Las tormentas geomagnéticas (TGM) son fenómenos importantes para el clima espacial. Se tratan de debilitamientos temporales del campo magnético terrestre (CMT) debido a la entrada de partículas y energía provenientes del viento solar al entorno magnetosférico. Este proceso provoca una intensificación de las corrientes magnetosféricas, un incremento de la corriente del anillo. La intensificación de tales corrientes resulta en la inducción de un campo magnético que se opone al CMT, debilitandolo en el proceso.\\
+Geomagnetic storms (GMS) are important space weather phenomena. They are temporal weakening of the Earth's magnetic field (EMF) due to the entry of particles and energy from the solar wind into the magnetospheric environment. This process causes an intensification of the magnetospheric currents and specifically, an increase of the ring current. The intensification of such current results in the induction of a magnetic field that opposes the EMF, weakening it in the process.\\
+
+%La presencia de TGM puede impactar negativamente en la confiabilidad de sistemas de comunicaciones, de navegación e incluso, en casos más  extremos, sistemas de abastecimiento de energía. Consecuentemente, llevando a pérdidas económicas debido a los problemas que conlleva la afectación negativa de los sistemas antes mencionados. Es por ello que es necesario el estudio constante de las TGM, así como las consecuencias asociadas a su presencia. El monitoreo de las TGM se lleva a cabo por medio de índices geomagnéticos. Los índices geomagnéticos son indicadores que permiten medir de forma cuantitativa la afectación causada por una TGM a escala planetaria. Los índices se calculan a partir de mediciones geomagnéticas, las cuales son procesadas.
+The occurrence of GMS can have detrimental effects on the reliability of communication and navigation systems, and in extreme cases, even disrupt power supply systems. These disruptions often result in significant economic losses. Therefore, continuous study of GMS and their associated consequences is crucial to mitigate their impact on various systems. The monitoring of geomagnetic activity (GMA) is facilitated through the use of geomagnetic indices. These indices serve as quantitative measures of the impact of GMA on a planetary scale, calculated from processed geomagnetic measurements.\\
+
+
+%Aunque las TGM son fenómenos globales, a escala regional se pueden presentar diferencias. Estas variaciones regionales se relacionan con la Heterogeneidad de la Tierra, asimetrías en los sistemas de corrientes magnetosféricas e ionosféricas, así como la forma en cómo interaccionan entre ellos en determinados sectores. Como resultado, factores como la latitud geomagnética, hora local y estación del año pueden influir en el desarrollo de la TGM
+While GMS are global phenomena, regional variations can occur due to Earth's heterogeneity, asymmetries in magnetospheric and ionospheric current systems, and their interactions within specific sectors. Consequently, factors such as geomagnetic latitude, local time, and season of the year can influence the characteristics of GMS at regional levels.\\
+
+%Aunque las TGM presentan efectos a escala planetaria, en la escala regional se pueden presentar diferencias. Tales diferencias se relacionan con la asimetría del sistema que conforma el entorno geomagnético. Esas diferencias en la respuesta geomagnética pueden conducir a diferencias en los efectos asociados al clima espacial
+%Although TGMs present effects on a planetary scale, differences may occur on a regional scale. Such differences are related to the asymmetry of the system that makes up the geomagnetic environment. These differences in geomagnetic response can lead to differences in the effects associated with space weather.\\
+
+
+%Considerando que el origen de tales diferencias en la respuesta regional se debe a determinados mecanismos físicos, queda la interrogante: ¿qué son éstos mecanismos y cuales son los que más afectan más a determinadas regiones? ¿Es posible identificar los efectos relacionados a tales mecanismos?.
+Given that regional response disparities stem from specific physical mechanisms, the question arises: what are these mechanisms, and which ones have the greatest impact on particular regions? Can we pinpoint the effects associated with these mechanisms?
+
+
+\subsection{Sources of the magnetic field}
+%Para el estudio del clima espacial, se suelen clasificar las contribuciones del campo magnético en 2 fuentes principales: Campo magnético regular y campo magnético perturbado \citep{ddyn2005}. En el caso del campo magnético regular, se encuentran las variaciones cíclicas asociadas con procesos presentes en la ionosfera. Estos procesos son debidos a corrientes ionosféricas, de las cuales se destaca la corriente del Sol Quieto (SQ). Esta corriente se origina debido a la variación con que la luz del Sol incide en la ionosfera, ocasionando dos efectos: ionización parcial de la atmósfera, y calentamiento de la misma \citep{l3, l_basic_spaceplasmaphysic}. Las variaciones magnéticas asociadas con la corriente SQ tienen amplitudes en el rango de $10-100$ nT a lo largo del día \citep{iaga_guide, baseline_Gjerloev}. La intensidad de éstas fluctuaciones dependen de factores como la latitud geomagnética, la temporada del año, la hora local, e incluso, de la intensidad de la radiación solar debido a la actividad del Sol \citep{iaga_guide, gombosi_1998, l_handbook_geof_sw_Geom_field
+In space weather studies, magnetic field contributions are typically categorized into two main sources: regular magnetic field and disturbed magnetic field. The regular magnetic field exhibits cyclic variations attributed to processes within the ionosphere, like the Solar Quiet (SQ) current. This current arises from variations in solar radiation reaching the ionosphere, leading to partial ionization and atmospheric heating \citep{l3, l_basic_spaceplasmaphysic}. Magnetic fluctuations linked to the SQ current typically range from 10 to 100 nT throughout the day \citep{iaga_guide, baseline_Gjerloev}. The intensity of these fluctuations is influenced by factors such as geomagnetic latitude, season, local time, and solar activity levels \citep{iaga_guide, gombosi_1998, l_handbook_geof_sw_Geom_field}.\\
+
+
+%Dentro del campo magnético regular también se contemplan los efectos de marea provocados por los efectos gravitacionales del Sol y la Luna, también se presentan variaciones magnéticas debido a los efectos de marea ocasionados por el Sol y la Luna sobre la ionosfera \citep{BARTELS_kp}.  Estas variaciones tienen una gran influencia por parte del ciclo de traslación de la Luna (efecto gravitacional), así como la rotación del Sol (variación en la incidencia de radiación). Esto da lugar a variaciones magnéticas estacionales. Este tipo de variación estacional da lugar a la \emph{variación día a día} que consiste en variación tanto en comportamiento como en magnitud de la variación diurna de un día a otro. Según \cite{iaga_guide} la variación día a día, presenta pequeñas amplitudes, de apenas $\sim 10$ nT, aunque su intensidad también depende de factores como la estación del año, latitud geomagnética, el ciclo de la luna así como la rotación solar
+Within the regular magnetic field, tidal effects caused by the gravitational forces of the Sun and the Moon are also considered, leading to magnetic variations in the ionosphere \citep{BARTELS_kp}. These variations are significantly influenced by the translational cycle of the Moon (gravitational effect) and the rotation of the Sun (changes in radiation incidence on atmosphere), resulting in seasonal magnetic variations. This seasonal variation contributes to the ``day-to-day variation'', characterized by changes in both behavior and magnitude of the diurnal variation from one day to the next one. The day-to-day variation typically exhibits small amplitudes, around $ \sim 10 $ nT, although its intensity is also influenced by factors such as the season of the year, geomagnetic latitude, the lunar cycle, and solar rotation.\\
+
+
+%A lo que respecta del campo magnético perturbado, éste se atribuye principalmente a las tormentas geomagnéticas y los campos magnéticos inducidos inducidos por los fenómenos asociados a éstas. Según \cite{ddyn2005}, las perturbaciones magnéticas relacionadas con las tormentas geomagnéticas, se pueden subclasificar en: contribución magnetosférica y contribución ionosférica
+In terms of the disturbed magnetic field, it is primarily attributed to GMSs and the induced magnetic fields associated with them. According to \cite{ddyn2005}, magnetic disturbances related to geomagnetic storms can be subclassified into magnetospheric contributions and ionospheric contributions.\\
+
+%Por una parte, la contribución magnetosférica, se debe a la intensificación de la actividad de las corrientes magnetosféricas durante eventos de TGM. Por otro lado, la contribución ionosférica se debe a la presencia de dos corrientes ionosféricas. Para latitudes medias y bajas se destacan las corrientes de perturbación polar 2 ($DP2$) \citep{nishida_68_fluctuations} y dínamo perturbado ($Ddyn$) \citep{blanc_ddyn}. Estas corrientes se caracterizan por afectar la ionosfera y el CMT para latitudes medias y bajas. Además, inducen fluctuaciones cuasi-periódicas, con frecuencias (periodos) bien conocidas, en el CMT a escala regional, las cuales pueden ser medidas en magnetómetros.\\
+On one hand, the magnetospheric contribution stems from the intensified activity of magnetospheric currents during GMS events. On the other hand, the ionospheric contribution arises from the presence of two ionospheric currents. Notably, for mid and low latitudes, the disturbed polar current 2 ($DP2$) \citep{nishida_68_fluctuations} and disturbed dynamo ($Ddyn$) \citep{blanc_ddyn} currents are prominent. These currents are known for their impact on the ionosphere and their influence at mid and low latitudes during GMS. Moreover, they induce quasi-periodic fluctuations, with well-defined frequencies (periods), in the EMF on a regional scale, which are observable using magnetometers.
+
+
+\subsection{Objectives}
+
+%El objetivo del presente trabajo es el de caracterizar sus diferencias basadas en diferencia de latitud y tiempo local. Particularmente hablando, estudiar la respuesta en una región a latitud magnética ecuatorial. Tal es el caso de la región en que se encuentra Perú, el cual cuenta con toda una red de magnetómetros. En esta región, es posible estudiar mecanismos ionosféricos y magnetosféricos que no se presentan en latitudes medias-bajas, como lo es el electro jet ecuatorial (EEJ). A partir de los casos de estudio selecionados, se buscó detectar y aislar las variaciones geomagnéticas regionales, así como la firma magnética asociada a los mecanismos físicos que provocan tales efectos. Comprender éstos procesos permite entender mejor los efectos asociados al clima espacial y cómo pueden afectar de forma diferente en cada región
+The aim of this study is to characterize geomagnetic response differences based on variations in latitude and local time, with a specific focus on equatorial regions. The region of interest is Peru, which hosts a network of magnetometers. This area presents the ionospheric mechanism such as the equatorial electrojet (EEJ), not typically observed in mid-low latitudes. Through selected case studies, our objective is to identify and isolate regional geomagnetic variations, along with the magnetic signatures associated with the underlying physical mechanisms. A comprehensive understanding of these processes contributes to a deeper insight into the effects of space weather and their diverse impacts on different regions.\\
+
+
+
+\subsection{Hypothesis}
+%Las respuestas geomagnéticas asociadas a una tormenta geomagnética se deben a actividad ionosférica, así como las variaciones de las corrientes magnetosféricas en tiempo local. Para poder tener un mejor entendimiento del clima espacial regional, es necesario tomar en cuenta el desarrollo de éstos sistemas, desde la perspectiva de una región en específico. Además, se compararán las respuestas locales de regiones con distintas latitudes geomagnéticas. Se asumirá que esta comparación permitirá identicar las diferencias y similitudes entre las respuestas regionales y la latitud geomagnética. Para ello, consideramos que los índices geomagnéticos permiten identificar y caracterizar las TGMs. Por un lado, los índices planetarios permiten caracterizar la actividad geomagnética a nivel planetario. Mientras que los índices regionales combinan la respuesta planetaria y regional. Para el caso regional, es necesario el acceso de mediciones del CMT en las regiones de estudio. Esta práctica vuelve posible tener un mejor entendimiento de algunos de los procesos ionosféricos y magnetosféricos en tales regiones \citep{BARTELS_kp}. 
+The geomagnetic responses associated with a GMS are due to ionospheric activity, as well as the variations of the magnetospheric currents in local time. In order to have a better understanding of regional space weather, it is necessary to take into account the development of these systems from the perspective of a specific region. In addition, the local responses of regions with different geomagnetic latitudes will be compared. It will be assumed that this comparison will allow us to identify differences and similarities between regional responses and geomagnetic latitude. For this purpose, we consider geomagnetic indices to identify and characterize the GMS. On one hand, planetary indices allow characterizing geomagnetic activity at the planetary level. Meanwhile, regional indices combine planetary and regional response. For the regional case, it is necessary to have access to EMF measurements within the study region. This practice makes it possible to have a better understanding of some of the ionospheric and magnetospheric processes in such regions.\\
+
+\subsection{prior research}
+
+%En \cite{lenica}, se estudió la variación de la respuesta geomagnética en tiempo local y cómo ésta generaba una diferencia en la respuesta geomagnética planetaria diferente con la observada sobre el centro de México. En el mismo trabajo se señaló la importancia de estudiar la contribución de los sistemas magnetico-ionosféricos dependiendo de la hora local para el caso de México. Posteriormente, en \cite{P-corona2}, se realizó un estudio más a detalle de la respuesta geomagnética local, presentando por primera vez en México, los índices geomagnéticos locales $\Delta H_{mex}$ y $K_{mex}$. En el trabajo se discute sobre las diferencias que éstos índices regionales presentan con respecto a sus contrapartes planetarias. En este mismo trabajo se concluyó que las variaciones locales podHypothesisían deberse principalmente a procesos ionosféricos. Por su parte, en \cite{dramaria7, dramaria_13} se realizaron estudios de la ionosfera y se encontró una respuesta ionosférica durante periodos de tormenta geomagnética.\\
+In \cite{lenica} they investigated variations in geomagnetic response over local time, revealing discrepancies in the planetary geomagnetic response compared to observations over central Mexico. The significance of examining magnetic-ionospheric contributions in relation to local time, particularly in Mexico, was emphasized. Subsequently, \cite{P-corona2} conducted a more detailed analysis of local geomagnetic response, introducing the local geomagnetic indices $Delta H_{mex}$ and $K_{mex}$ for the first time in Mexico. This work highlighted differences between these regional indices and their planetary counterparts, suggesting that local variations may primarily stem from ionospheric processes. Additionally, studies conducted in \cite{dramaria7, dramaria_13} explored ionospheric behavior during GMS periods.\\
+
+
+%En \cite{tesis}, se probó que para el centro de México, se presentan perturbaciones geomagnéticas durante seis TGMs. Además, se encontró que la respuesta del CMT regional está relacionada con la presencia de las corrientes ionosféricas de dínamo perturbado ($Ddyn$) y perturbación polar 2 ($DP2$). Utilizando el método propuesto por \cite{amory2020_filtros}, se aislaron las fluctuaciones magnéticas asociadas a la presencia de las corrientes ionosféricas. Además, por medio del contenido total de electrones (TEC), se comprobó que tal respuesta magnética era consistente con la respuesta ionosférica durante los periodos de tormenta. Por otro lado, \cite{CASTELLANOSVELAZCO2024106237}extiende el estudio previo de 6 a 20 TGMs. Adicionalmente se implementaron cambios en el procesado de datos magnéticos, lo cual permitió obtener una mayor confianza en los resultados obtenidos. \cite{CASTELLANOSVELAZCO2024106237} concluyen la necesidad de realizar estudios similares para diferentes regiones, con el objetivo de contextuallizar sus resultados
+In \cite{tesis}, it was shown that geomagnetic disturbances occured during six GMSs in central Mexico. The regional EMF response was shown to be linked to the presence of ionospheric currents disturbed dynamo ($Ddyn$) and disturbed polar no. 2 ($DP2$). Using the methodology proposed by \cite{amory2020_filtros}, magnetic fluctuations associated with these ionospheric currents were isolated. Additionally, total electron content (TEC) analysis confirmed the consistency of the magnetic response with ionospheric behavior during storm periods. Expanding upon this work, \cite{CASTELLANOSVELAZCO2024106237} extended the study to 20 GMSs and implemented improvements in magnetic data processing for enhanced result accuracy. Their findings underscore the importance of conducting similar investigations in diverse regions to provide context for their results.\\
+
+
+%Recientemente, se agregaron tres tormentas, acontecidas durante el año 2023. Las TGM agregadas, son los primeros eventos intensos del ciclo solar 25 que actualmente se encuentra en desarrollo. Para el estudio de respuesta geomagnética local en otras regiones, se accedió la plataforma pública de INTERMAGNET (\textit{International Real-Time Magnetic Observatory Network} \citep{intermagnet}). Cabe señalar que el estudio se limita a la disponibilidad de registros geomagnéticos en cada región, por lo que hay eventos y regiones no estudiadas por la no disponibilidad de datos.
+Three additional GMS occurring in 2023 have been incorporated into the analysis, marking the initial intense events of solar cycle 25, which is currently unfolding. To explore local geomagnetic responses in other regions, the INTERMAGNET (International Real-Time Magnetic Observatory Network) public platform was utilized \citep{intermagnet}. However, it's important to acknowledge that the study's scope is constrained by the availability of geomagnetic records in each region. Consequently, there are events and regions that remain unstudied due to data unavailability.\\
+
+
+\section{Methodology}
+
+\subsection{Study Cases}
+\label{SS:2-1}
+
+%Para este proyecto, se propone utilizar las 23 TGMs (Tabla \ref{tab:1}) con las que previamente se ha trabajado. El criterio de selección de estas TGM se basa en los picos de los índices geomagnéticos locales $\Delta H_{local}$ y $K_{local}$ en México, donde se seleccionan aquellos eventos donde $\Delta H \leq -120$ nT y $K_{local} \geq 7$. Parte del objetivo de seleccionar los eventos ya disponibles con datos de magnetómetros en Perú, es el de realizar una comparativa en las diferencias de respuesta regional.
+For this project, we propose utilizing the 23 GMSs (Table \ref{tab:1}) previously analyzed. These GMSs were selected based on specific criteria derived from the peaks of the local geomagnetic indices $\Delta H_{local}$ and $K_{local}$ in Mexico. Specifically, events were chosen where $\Delta H \leq -120$ nT and $K_{local} \geq 7$. By selecting events with available magnetometer data in Peru, our objective is to compare regional response differences effectively.\\ 
+
+%Estos eventos incluyen también a las nuevas TGMs intensas que ocurrieron en la segunda mitad del año 2023 y lo que va del 2024. Es necesario aclarar también que, a partir de pruebas preliminares, se pueden reducir los casos de estudio para las posteriores etapas del proyecto. Esto con el fin de concentrarse en aquellos eventos cuya respuesta regional sea más significativa en comparación con el resto.
+These events also encompass recent intense GMSs that transpired in the latter half of 2023 and thus far in 2024. Additionally, it is important to note that, based on preliminary assessments, the number of case studies may be narrowed down for subsequent stages of the project. This will allow us to concentrate our efforts on events with a more pronounced regional response compared to others in the project.\\
+
+\begin{table*}[h!]
+	\normalsize
+	\centering
+	\caption{Case studies: Event number, GMS Starting date, Minimum (Maximum) value reached during events for ${\rm Dst}$(${\rm K_P}$) and ${\rm \Delta H_{local}}$(${\rm K_{local}}$)}
+	\label{tab:1}
+	\begin{tabular}{cccccc}
+		\hline
+		Event & Beginning of & $^a {\rm Dst}$ minimum
+		& $^b{\rm \Delta H}$ minimum
+		& $^a{\rm K_p}$ & $^b {\rm K_{local}}$ \\
+		\#    & Main phase & [nT] & [nT] & maximum & maximum\\
+		\hline
+		1 & 2003/05/29 & -144 & -190 & 8+ & 9 \\ 
+		2 & 2003/10/14 & -85 & -126 & 7+ & 7- \\ 
+		3 & 2003/11/20 & -422 & -441 & 9- & 9 \\ 
+		4 & 2004/07/22 & -170 & -167 & 9- & 8+ \\ 
+		5 & 2004/08/30 & -129 & -154 & 7 & 7- \\ 
+		6 & 2004/11/08 & -374 & -398 & 9- & 9 \\ 
+		7 & 2005/05/15 & -247 & -206 & 8+ & 7 \\ 
+		8 & 2005/06/12 & -106 & -120 & 7+ & 6+ \\ 
+		9 & 2005/08/24 & -184 & -138 & 9- & 9- \\ 
+		10 & 2005/08/31 & -122 & -125 & 7 & 6+ \\ 
+		11 & 2006/08/19 & -79 & -131 & 6 & 7- \\ 
+		12 & 2006/12/14 & -162 & -247 & 8+ & 9 \\ 
+		13 & 2015/03/15 & -222 & -282 & 8 & 8- \\ 
+		14 & 2015/10/07 & -124 & -143 & 7+ & 7+ \\ 
+		15 & 2015/12/20 & -155 & -189 & 7- & 7 \\ 
+		16 & 2016/03/06 & -98 & -120 & 6 & 7 \\ 
+		17 & 2016/10/13 & -104 & -128 & 6+ & 6+ \\ 
+		18 & 2017/05/27 & -125 & 145 & 7 & 8 \\ 
+		19 & 2017/09/07 & -124 & -170 & 8+ & 8+ \\ 
+		20 & 2018/09/25 & -175 & -176 & 7+ & 7- \\
+		21 & 2023/02/26 & -144 & -190 & 8+ & 9 \\ 
+		22 & 2023/03/23 & -85 & -126 & 7+ & 7- \\ 
+		23 & 2023/04/23 & -422 & -441 & 9- & 9 \\ 		 
+		\hline
+		\multicolumn{6}{l}{Comments for the Table.} \\
+		\multicolumn{6}{l}{$^a$ $Dst$ and Kp were obtained from the \href{http://isgi.unistra.fr/data_download.php}{International Service of Geomagnetic Indices (ISGI)}.}\\
+		\multicolumn{6}{l}{$^b$ Regional geomagnetic $\mathrm{\Delta H_{local}}$ and ${\rm K_{local}}$ were computed by the Space Weather } \\
+		\multicolumn{6}{l}{National Laboratory, using resgisters from the magnetic observatory from Teoloyucan, Mexico }\\ 
+		\multicolumn{6}{l}{(events 1-20) and the magnetic station in Coeneo Michoacan, Mexico (events 21 - 23).} \end{tabular}
+\end{table*}
+
+
+\subsection{Data processing}
+\label{SS:2-2}
+%Para los estudios regionales de TGM, se utilizan los registros de magnetómetros posicionados en la región de interés. A partir de tales registros, se busca obtener información sobre las variaciones de las corrientes eléctricas en ionosfera y magnetósfera \citep{BARTELS_kp}. Es necesario considerar que en los datos de salida, se presenta contribución magnética relacionada con procesos ajenos a la TGM \citep{amorymazaudier_2017, amory2020_filtros}. Por lo tCasos de Estudioanto, es imprescindible realizar primero un procesado de los datos de magnéticos de salida para identificar y aislar la información magnética asociada a la TGM.
+For regional TGM studies, we use data from magnetometers situated in the region of interest. These records provide valuable insights into variations of electric currents in both, the ionosphere and magnetosphere \citep{BARTELS_kp}. However, it's important to note that the output data includes magnetic contributions from processes beyond GMS events \citep{amorymazaudier_2017, amory2020_filtros}. Therefore, an initial processing step is necessary to isolate and identify the magnetic information specifically associated with GMSs.
+
+\subsection{Baseline derivation}
+
+
+%En el CTM se presentan variaciones cíclicas con periodos menores a un año, se les conoce como \emph{variaciones regulares} \citep{l_handbook_geof_sw_Geom_field}. Las variaciones regulares de mayor importancia son la variación día a día ($H_0$) y la variación diurna ($H_{SQ}$) \citep{baseline_Gjerloev, vanKampt}. Una vez identificadas las variaciones regulares, su contribución es removida de los datos de salida, tal y como se describe en la siguiente expresión:
+In the EMF, there are cyclical variations with periods of less than one year, known as \emph{regular variations} \citep{l_handbook_geof_sw_Geom_field}. Among these, the most significant are the day-to-day variation ($H_0$) and the diurnal variation ($H_{SQ}$) \citep{baseline_Gjerloev, vanKampt}. Once these regular variations are identified, their magnetic contribution is eliminated from the output data, as outlined in the following expression:
+
+\begin{equation}
+	\label{eq:lineabase}
+	H = H_{raw} - (H_0-H_{SQ}), 
+\end{equation}
+
+% donde $H_{raw}$ son los datos de salida del magnetómetro.  El proceso de identificar las variaciones regulares se basa en principios estadísticos, donde se buscan los valores más ``comunes'', atribuidos a periodos de calma. Adicionalmente, este proceso también discrimina los casos donde se presenta variación en los datos, lo que se atribuye a periodos de perturbación.  En las secciones \ref{S.4.1} y \ref{S.4.2} del Apéndice se profundiza más en este apartado.
+\noindent here, $H_{raw}$ represents the raw magnetometer output data. The identification of regular variations relies on statistical principles, wherein the search for the most ``common'' values, associated with calm periods, is conducted. Additionally, this process discerns instances of data variation, attributed to periods of disturbance. For further elaboration on this topic, refer to sections \ref{S.4.1} and \ref{S.4.2} in the Appendix.
+
+\subsection{Ionospheric current identification}
+
+%El proceso de identificar las firmas magnéticas es el mismo que el seguido en \cite{ddyn2005, amorymazaudier_2017, amory2020_filtros}. Este proceso las mediciones de un magnetómetro en específico, se deben a la suma de varias fuentes de campo magnético, tal y como se describe a continuación:
+The process of identifying magnetic signatures follows the same approach as that outlined in \cite{ddyn2005, amorymazaudier_2017, amory2020_filtros}. In this process, the measurements from a specific magnetometer results from the combination of several magnetic field sources, as described below:
+
+\begin{equation}
+	\label{eq:diono1}
+	H = H_P+H_{reg}
+\end{equation}
+
+%donde, $H_{P}$ son las perturbaciones del campo magnético en la región a estudiar y $H_{reg} =H_0+H_{SQ}$ las variaciones regulares. Adicionalmente, las perturbaciones del campo magnético se pueden expresar como:
+\noindent here, $H_{P}$ represents the magnetic field perturbations in the region under study, and $H_{reg} =H_0+H_{SQ}$ represents the regular variations. Additionally, the magnetic field perturbations can be expressed as:
+
+\begin{equation}
+	\label{eq:pert}
+	H_P = H_{mag}+H_{iono}
+\end{equation}
+
+%En la ecuación \ref{eq:pert}, el primer término del lado derecho se refiere a la contribución magnetosférica, mientras que el segundo se refiere a la contribución ionosférica. En la literatura es común que a $H_{mag}$ se le aproxime cómo $GI_P \cdot cos(\lambda)$, siendo $GI_P$ el índice geomagnético planetario, que puede ser $Dst$ o su equivalente de mayor resolución $SYM-H$, mientras que $\lambda$ es la latitud geomagnética de la región de interés. $H_{iono} = H_{Ddyn}+H_{DP2}$, son las fluctuaciones magnéticas asociadas con las corrientes ionosféricas $Ddyn$ y $DP2$. Considerando que las corrientes $Ddyn$ y $DP2$ generan fluctuaciones cuasi-periódicas bien diferenciadas entre sí, es posible aislar sus efectos a través de filtros de frecuencias. \cite{CASTELLANOSVELAZCO2024106237} usó espectro de potencias para identificar la banda de frecuencia en que $Ddyn$ presentaba tales fluctuaciones para cada evento
+In Equation \ref{eq:pert}, the first term on the right-hand side represents the magnetospheric contribution, while the second term represents the ionospheric contribution. It's common in the literature to approximate $H_{mag}$  as $GI_P \cdot cos(\lambda)$, where $GI_P$ is the planetary geomagnetic index, typically $Dst$ or its higher resolution equivalent $SYM-H$, and $\lambda$  is the geomagnetic latitude of the region of interest. $H_{iono} = H_{Ddyn}+H_{DP2}$, denotes the magnetic fluctuations associated with the $Ddyn$ and $DP2$ ionospheric currents. Given that the $Ddyn$ and $DP2$ currents generate quasi-periodic fluctuations with characteristic periods distinct from each other, their effects can be isolated using frequency filters.\\
+
+\begin{equation}
+	\label{eq:diono2}
+	H_{Ddyn}+H_{DP2} = H-(GI_P \cdot cos(\lambda)+H_0+H_{SQ}).
+\end{equation}
+%A partir del resultado de la Ecuación \ref{eq:diono2}, \cite{amory2020_filtros} propone usar filtros de frecuencia para aislar las firmas magnéticas de $Ddyn$ y $DP2$. De acuerdo con estudios previos \citep{nishida_68_fluctuations, blanc_ddyn}, los periodos en que las corrientes $Ddyn$ y $DP2$  generan fluctuaciones en el campo magnético regional son de aproximadamente $\sim 24 h$ y $\leq 4h$ respectivamente. Consecuentemente, se requiere ajustar un filtro pasa bandas para $H_{Ddyn}$ y un filtro pasa altas para $H_{DP2}$.\\
+
+Building upon Equation (\ref{eq:diono2}), \cite{amory2020_filtros} proposes utilizing frequency filters to isolate the magnetic signatures of $Ddyn$ and $DP2$. Previous research \citep{nishida_68_fluctuations, blanc_ddyn} indicates that the periods during which $Ddyn$ and $DP2$ induce fluctuations in the regional magnetic field are approximately around 24 hours and less than or equal to 4 hours, respectively. Consequently, it is imperative to configure a band-pass filter for $H_{Ddyn}$ and a high-pass filter for $H_{DP2}$.\\
+
+%Si bien la frecuencia de corte para el filtro pasa altas es bien definida ($f \geq 6.94 \times 10 ^{-5} Hz$ o $T \leq 4 h$) por \cite{nishida_68_fluctuations}, el caso de las frecuencias de corte para el filtro pasa-bandas es menos trivial. Las dos frecuencias de corte pueden variar significativamente dependiendo de cada TGM. Es por ello que en el \cite{CASTELLANOSVELAZCO2024106237} se optó por aplicar espectros de potencia ($PSD$) al resultado de \ref{eq:diono2} correspondiente a cada TGM. El $PSD$ permite detectar picos de potencia a determinadas frecuencias. Al usar ésta herramienta, se encontró que los picos de potencia coinciden con los rangos de frecuencia en que $H_{Ddyn}$ presenta sus fluctuaciones. Una vez detectados los picos de potencia, se ajustan las frecuencias de corte entorno a éstos. Finalmente, se realiza el proceso de filtrado para aislar las fluctuaciones magnéticas de $H_{Ddyn}$ y $H_{DP2}$.\\
+While the cutoff frequency for the high-pass filter is well-defined ($f \geq 6.94 \times 10^{-5}$ Hz or $T \leq 4$ hours) as indicated by \cite{nishida_68_fluctuations}, determining the cutoff frequencies for the band-pass filter is more intricate. These frequencies can significantly vary for each GMS. To tackle this challenge, \cite{CASTELLANOSVELAZCO2024106237} employed power spectral density ($PSD$) on the outcome of Equation \ref{eq:diono2} for each GMS. Utilizing $PSD$ allows for the detection of power peaks at specific frequencies, aligning with the frequency ranges of $H_{Ddyn}$ fluctuations. Once these power peaks are identified, the cutoff frequencies are adjusted accordingly. Subsequently, the filtering process is executed to isolate the magnetic fluctuations of $H_{Ddyn}$ and $H_{DP2}$.\\
+
+%Las limitaciones con el método descrito previamente son: 
+The limitations associated with the method described above include
+
+\begin{enumerate}
+	%\item El espectro de potencia solo permite estudiar las intensidades en el dominio de la frecuencia, pero no en el tiempo. Ésto impide analizar el periodo en el que se generaron tales picos de intensidad \citep{amory_2021}.
+	\item The power spectrum method only enables the study of intensities in the frequency domain, lacking the ability to analyze the specific time periods during which these intensity peaks occur \citep{amory_2021}
+
+	%	\item Se intenta aproximar toda la actividad magnetosférica a través de un índice geomagnético siendo que sus valores, y desestima los efectos de la corriente del anillo. 
+	\item It aims to approximate all magnetospheric activity using a geomagnetic index, thereby disregarding the effects of the ring current.
+
+	%\item Se aproxima a la corriente del anillo, como una corriente longitudinalmente simétrica. Esto difiere con que se trata de un sistema de corrientes asimétrico, compuesto por dos corrientes, una simétrica y una asimétrica.	
+	\item It approximates the ring current as a longitudinally symmetrical current, whereas in reality, it comprises both symmetrical and asymmetrical components.	
+\end{enumerate}
+
+%Para atender éstos problemas, se propone el siguiente procedimiento adicional:
+To address these problems, the following additional procedure is proposed:
+
+\subsection{Frequency and Time Analysis: Wavelets}
+\label{SS:2-3}
+
+%Como se menciona en las conclusiones de \cite{CASTELLANOSVELAZCO2024106237}, una buena forma de mejorar el entendimiento de la respuesta geomagnética regional en periodos de tormenta es el análisis en dominio de tiempo y frecuencia. Tal práctica se llevó a cabo en \cite{amory_2021}. Actualmente, se han realizado estudios preliminares de wavelets de los eventos enlistados en la Tabla \ref{tab:1} con datos de TEO y COE
+As mentioned in the conclusions of \cite{CASTELLANOSVELAZCO2024106237}, a good way to improve the understanding of the regional geomagnetic response in storm periods is time and frequency domain analysis. Time and frequency domain analysis was conducted in a similar manner in a previous study \citep{amory_2021}. Preliminary wavelet studies of the events listed in Table \ref{tab:1} have already been conducted using Teoloyucan and Coeneo data, building on the approach outlined in \cite{amory_2021}.\\
+
+
+%Esta herramienta de análisis complementaria tiene ciertas ventajas, ya que permite detectar el momento en el tiempo en que se presentan ciertas fluctuaciones a determinada frecuencia. Esto es algo que no puede observarse en los espectros de potencia (bien puede tratarse de un efecto limitado a un corto periodo, o un efecto persistente). Esta es la idea del uso de wavelets, pues permite localizar en tiempo determinadas fluctuaciones a ciertas frecuencias.
+This complementary analysis tool has certain advantages, since it makes it possible to detect the moment in time when certain fluctuations occur at a certain frequency. This aspect is not readily observable in $PSD$ (it may be an effect limited to a short period, or a persistent effect). Wavelets, on the other hand, allow for the precise localization in time of specific frequency fluctuations, providing valuable insight into their temporal occurrence.\\
+
+%La transformada wavelet puede ser utilizada para analizar series de tiempo que contengan una potencia no estacionaria en diferentes frecuencias \citep{guide_wavelet_routines}. De la misma forma, es necesario considerar la forma o función wavelet $\psi_0(n)$ donde $n$ es un parámetro de tiempo. Una función wavelet, como la ondícula \emph{Morlet} que es la seleccionada para éste trabajo. Al igual que con los \emph{PSD}, la potencia de la ondícula permite visualizar los picos de energía de las frecuencias más significativas, con la diferencia en que también se obtiene información en el dominio del tiempo \cite{book_analysis_Method_multiSp_data, guide_wavelet_routines}.
+The wavelet transform is utilized for analyzing time series featuring non-stationary power across various frequencies \citep{guide_wavelet_routines}. It is essential to consider the wavelet form or function. In this work, we employ the \emph{Morlet} wavelet due to its effectiveness. Similar to the PSD, the wavelet power enables visualization of energy peaks corresponding to significant frequencies. However, it also provides temporal information, offering a comprehensive analysis of the data \cite{book_analysis_Method_multiSp_data, guide_wavelet_routines}.
+
+\subsection{Individual identification of magnetospheric sources}
+%Según \cite{partialringcurrentidx}, una fuente significativa de la respuesta geomagnética regional es la presencia una corriente parcial del anillo. Se trata de una corriente que se presenta en durante la fase principal de la TGM. No obstante, las corrientes de la magneto-pausa y magneto-cola también pueden influir en los valores de los índices $Dst$ y $SYM-H$, por lo que su actividad también podría influir en el clima espacial regional. Especialmente al considerar factores como el tiempo local en que se producen las TGM
+According to \cite{partialringcurrentidx}, a noteworthy contributor to the regional geomagnetic response is the partial ring current, active during the main phase of GMSs. However, it's essential to acknowledge that magneto-pause and magneto-tail currents may also impact the $Dst$ and $SYM-H$ indices, potentially influencing regional space weather dynamics. This influence is particularly significant when considering factors such as the local time of GMS occurrence.\\
+
+%De acuerdo con \cite{partialringcurrentasym}, a través del modelado, es posible aproximar la contribución magnética asociada con las corrientes de la magneto-pausa, magneto-cola y la corriente parcial del anillo. El modelo planteado por \cite{parabmagnet}, es puesto en práctica en \cite{magnetosphericcurrentscontr, partialringcurrentasym}. En este modelo, se determina el campo magnético asociado a cada fuente magnetosférica posible dependiendo de las condiciones del medio interplanetario y la respuesta geomagnética. Así, a partir del primer término del lado derecho de la ecuación \ref{eq:pert}:
+Modeling techniques offer a mean to approximate the magnetic contributions stemming from magneto-pause, magneto-tail, and partial ring currents \citep{partialringcurrentasym}. The model proposed by \cite{parabmagnet} is implemented in \cite{magnetosphericcurrentscontr, partialringcurrentasym}. In this model, the magnetic field associated with each potential magnetospheric source is determined based on interplanetary medium conditions and geomagnetic responses. Thus, from the first term on the right-hand side of Equation \ref{eq:pert}:
+
+\begin{equation}
+	H_{mag} = H_{mp}(\psi, R_1)+H_t(\psi, R_1, R_2, \Phi_{pc})+H_r(\psi, h_r) + H_{pr}(\psi, I_{pr}, \theta_{pr}) + H_{mr}(\psi, R_1, h_r)
+\end{equation}	
+
+%donde, $H_{mp}$ es el campo magnético inducido por la magnetopausa y que apantalla al campo magnético, $H_r$ es el campo magnético asociado con la corriente simétrica del anillo, $H_t$ es el campo de la magneto cola, $H_{pr}$ es el campo asociado con la corriente parcial del anillo, $H_{mr}$ es el campo magnético de la magnetopausa que apantalla al campo de la corriente y $H_{fac}$ es el campo de las corrientes alineadas al campo.\\
+In this equation, $H_{mp}$ represents the magnetic field induced by the magneto-pause and shielding the magnetic field, while $H_r$ stands for the magnetic field associated with the ring symmetrical current. Additionally, $H_t$ denotes the magneto-tail field, $H_{pr}$ represents the field associated with the partial ring current, and $ H_{mr}$ signifies the magnetic field of the magneto-pause that shields the current field. \\
+
+%Adicionalmente, el modelo requiere de parámetros de entrada. Éstos son el ángulo de inclinación $\psi$ del eje, $R_1$ que es la distancia a la nariz de la magneto-pausa, $R_2$ es la distancia de la tierra al borde de la hoja de corriente de la magneto-cola, $\Phi_{pc}$ es el flujo magnético en los lóbulos de la cola, $h_r$ es el campo de la corriente del anillo en el centro de la Tierra, $I_{pr}$ es la máxima intensidad de la región 1 de la corriente alineada al campo, $\theta_{pr}$ es la latitud del electrojet ecuatorial en dirección oeste y $I_{pr}$ es la corriente total del anillo parcial.\\
+Additionally, the model requires input parameters. These are the tilt angle $psi$ of the rotation axis, $R_1$ which is the distance to the magneto-pause subsolar point, $R_2$ is the distance from the Earth to the edge of the magneto-tail current sheet, $Phi_{pc}$ is the magnetic flux in the tail lobes, $h_r$ is the field of the ring current at the center of the Earth, $I_{pr}$ is the maximum intensity of region 1 of the field-aligned current, $\theta_{pr}$ is the latitude of the equatorial electrojet in the westward direction, and $I_{pr}$ is the total current of the partial ring. \\
+
+%Cabe señalar que, algunos de estos parámetros se determinan mediante modelos complementarios, los cuales usan parámetros del medio interplanetario. En ese caso, se puede usar5 la plataforma pública \url{https://omniweb.gsfc.nasa.gov/} para tener acceso a parámetros del medio interplanetario como velocidad del viento solar, densidad del viento solar, campo magnético interplanetario, entre otros
+It's important to highlight that certain parameters are established through complementary models, leveraging data from the interplanetary medium. For accessing such data, platforms like \url{https://omniweb.gsfc.nasa.gov/} offer valuable resources including solar wind speed, solar wind density, interplanetary magnetic field, and more.\\
+
+
+\section{Concluding Remarks}
+\label{S:3}
+
+%Previo al proyecto aquí propuesto, se han realizado estudios para la región del centro de México. En lo que respecta al análisis de wavelets, los resultados preliminares muestran consistencia con los resultados de espectros de potencia. En general, se observa que en la mayoría de los casos los picos de potencia se encuentran en el rango de las 24-10 h, periodos consistentes con estudios previos. No obstante, éstos picos también son presentes durante la fase principal de cada tormenta, lo que contradice la naturaleza de la corriente Ddyn y la manifestación de sus efectos con retraso de varias horas. Razón por la cual se requieren más estudios para resolver estas inconsistencias. También, se observó que no todos los casos de estudio presentan una contribución magnética significativa por parte de lascorrientes ionosféricas Ddyn y DP2. Haciendo indispensable extender el análisis para determinar las condiciones en las cuales se presentarán los efectos de $Ddyn$ y $DP2$
+Previous studies have examined the central region of Mexico, laying the groundwork for the project proposed herein. Initial outcomes from wavelet analysis demonstrate coherence with power spectra results. Generally, power peaks fall within the 24-10 hour range, consistent with prior research. However, these peaks also coincide with the main phase of each storm, contrary to the expected behavior of the Ddyn current, which typically exhibits effects with a delay of several hours. Consequently, further investigations are necessary to resolve these discrepancies. Additionally, not all case studies exhibit a notable magnetic contribution from ionospheric currents Ddyn and DP2. Therefore, it is imperative to expand the analysis to ascertain the conditions under which the effects of $Ddyn$ and $DP2$ manifest.\\ 
+
+%Para este proyecto, se espera que, al remover los efectos asociados con la corriente asimétrica del anillo, se obtenga una diferencia en los resultados. Considerando la extensión reducida en que se presenta esta corriente, se reduce al sector local en que la región de estudio se encuentra al momento de la TGM \citep{partialringcurrentidx}.   Dado el papel tan relevante de la corriente parcial del anillo, el poder identificar su contribución magnética y separarla de los efectos asociados con $Ddyn$ y $DP2$ se vuelve de suma importancia para el estudio del clima espacial regional
+For this project, removing the effects linked to the asymmetric ring current is anticipated to yield distinct results. As this current is confined to the local sector where the study region is situated during GMS events \citep{partialringcurrentidx}, its influence is significantly reduced. Recognizing the magnetic contribution of the partial ring current and distinguishing it from the effects of $Ddyn$ and $DP2$ is crucial for understanding regional space weather dynamics.\\
+
+
+\section{Appendix}
+\label{S.4}
+
+
+\subsection{day to day variation}
+\label{S.4.1}
+
+%Para determinar la variación día a día o $H_0$,  el primer paso es identificar un valor representativo diario que se pueda considerar como valor común de cada día \citep{baseline_Gjerloev}. Para este trabajo, por el momento se consideró como valor representativo diario la mediana de cada día. Una vez calculados, éstos valores se interpolan, generando una serie de tiempo con una resolución temporal de 1 minuto. La serie de tiempo calculada es la linea base $H_0$. Es necesario ajustar un umbral con el cual, el algoritmo utilizado detecte en automático los valores diarios asociados a periodos de tormenta para removerlos. Así, todo valor que sobrepase el umbral será considerado como un día perturbado:
+To determine the day-to-day variation or $H_0$, the initial step wraps identifying a daily representative value that can serve as a common benchmark for each day \citep{baseline_Gjerloev}. For this study, the median of each day was initially chosen as the daily representative value. Once calculated, these values are interpolated, resulting in a time series with a temporal resolution of 1 minute. This interpolated time series constitutes the baseline $H_0$. Establishing a threshold is crucial to enable the algorithm to automatically identify daily values associated with storm periods for removal. Consequently, any value surpassing the threshold will be classified as a disturbed day:
+
+\begin{equation}
+	\label{eq:2.1}
+	Umbral = H_{med} + \frac{\sigma \cdot 1.3490}{n}
+\end{equation}
+
+%La expresión \ref{eq:2.1} toma como referencia una distribución normal de los datos por cada evento. Debido a las condiciones de perturbación, las distribuciones presentan un sesgo hacia valores negativos, pero mantienen una forma de distribución normal. $H_{med}$ es la mediana (valor típico) en cada ventana de tiempo. Por otro lado $\sigma \cdot 1.3490$, es el rango intercuartil para distribuciones normales \cite{iqr_theory}. Finalmente, $n$ es un factor que se determinó de forma experimental para ajustar el umbral. Este procedimiento, permite derivar de forma más precisa la linea base $H_0$ para periodos de tormenta. Para los días en que se presente la fase de recuperación de la tormenta, se implementó un sistema semi-manual en el que el operador descartará de manualmente los valores diarios que coincidan con la fase de recuperación de la tormenta. Si bien ésta solución es aceptable al estudiar eventos en concreto, es poco práctica para observaciones en tiempo real, por lo que no se recomienda para éste último caso
+Equation \ref{eq:2.1} references a normal distribution of the data for each event. Despite perturbation conditions skewing distributions towards negative values, they maintain a normal distribution shape. $H_{med}$ represents the median (typical value) in each time window, while $\sigma \cdot 1.3490$ denotes the interquartile range for normal distributions. Additionally, $n$ serves as a factor experimentally determined to adjust the threshold. This method enables a more accurate derivation of the baseline $H_0$ during storm periods. For days featuring the storm recovery phase, a semi-manual approach is employed, where operators manually discard daily values coinciding with this phase. While suitable for specific event studies, this manual intervention proves impractical for real-time observations and is thus not recommended for such scenarios.\\
+
+\subsection{Diurnal variation}
+\label{S.4.2}
+%Para obtener la variación diurna ($H_{SQ}$) es necesario identificar los días quietos. Se trata de los días caracterizados por tener una menor actividad geomagnética, siendo la contribución asociada con la corriente ionosférica del Sol quieto la más relevante. Posteriormente, se genera una linea base a partir de este promedio que se denominará como $H_{SQ}$, la cual será restada de la serie de tiempo original, junto con $H_0$.\\
+To derive the diurnal variation ($H_{SQ}$), quiet days must first be identified. These are days marked by lower geomagnetic activity, with the contribution primarily stemming from the ionospheric current of the sun quiet. Subsequently, a baseline is established from this average, denoted as $H_{SQ}$, which is then subtracted from the original time series, along with $H_0$.\\
+
+%En este trabajo, se siguió el criterio de \cite{vanKampt}, buscando la máxima fluctuación diaria. Para una ventana de tiempo con suficientes días y con una resolución de 1 minuto, se hace un re-muestreo de los datos a 1h. Cada hora, se calcula el rango intercuartil, lo cual permite describir la variación horaria. Posteriormente, se identifica la máxima variación para cada día o $MAX(\sigma)/MAX(IQR)$. Aquellos picos diarios de menor valor en la ventana de tiempo, serán considerados como los días más quietos locales o \emph{DQL}. Para este trabajo se utilizan dos \emph{DQL}: un día previo al evento y el segundo posterior al evento, enmarcando a la tormenta. Entre más cercanos (temporalmente) sean los DQL entre sí, la linea base será más precisa, aunque el umbral de separación entre los \emph{DQL} puede ser de hasta 66 días \cite{vanKampt}. A partir de aquí, se le aplicó una función de suavizado por cada 30 minutos \cite{baseline_Gjerloev} a la serie de tiempo resultante, a la cual identificamos como $H_{SQ}$
+In this study, we adhered to the criterion proposed by \cite{vanKampt}, which focuses on identifying the maximum daily fluctuation. Using a time window with sufficient days and a resolution of 1 minute, the data is resampled to hourly intervals. Hourly interquartile ranges are then calculated to describe the hourly variation. Subsequently, the maximum variation for each day, represented as $MAX(\sigma)/MAX(IQR)$, is determined. The days with the lowest values within the time window are designated as the local quietest days, denoted as $MAX(\emph{LQD})$. For this investigation, two such LQD are utilized: one day prior to the event and the second day following the event, effectively framing the storm period. The closer temporally the LQD are to each other, the more accurate the baseline will be, although the separation threshold between the DQLs can extend up to 66 days. Subsequently, a smoothing function, as outlined in \cite{baseline_Gjerloev}, is applied to the resulting time series, which we designate as $H_{SQ}$.\\
+
+\subsection{Peak Detection: Whitaker-Hayes Algorithm}
+%Una de las dificultades que se presentan al pre-procesar los datos de campo magnético son los valores extremos. Éstos valores pueden afectar los análisis posteriores, por lo que es sumamente importante poder generar un algoritmo que los detecte y elimine de la serie de tiempo a pre-procesar. Para detectar éstos valores extremos, se busca implementar el algoritmo de Whitaker-Hayes. Una ventaja que proporciona este algoritmo es que es lo suficientemente poco costoso, computacional mente hablando. Tal característica permite que el algoritmo Whitaker-Hayes pueda ser ejecutado por la mayoría de sistemas computacionales \cite{WHITAKER2018}.\\
+One challenge in preprocessing magnetic field data is dealing with extreme values, as they can significantly impact subsequent analyses. Hence, it's crucial to develop an algorithm capable of detecting and eliminating these outliers from the time series before preprocessing. To address this, we implement the Whitaker-Hayes algorithm. Notably, this algorithm is computationally efficient, making it feasible for most computational systems to execute \cite{WHITAKER2018}.\\
+
+%El algoritmo consiste en determinar qué tan alejado está un determinado valor con respecto a centro de la distribución de datos, usando medidas de variaciones (desviación estándar o rango intercuartil). El \emph{Puntaje Z modificado} o \emph{PZM}  utiliza la desviación de la mediana absoluta (DMA). Para poder lidiar con los picos \citep{WHITAKER2018, removing_with_Whitaker-Hayes}, se usa una derivada de primer orden en los datos continuos o $\nabla H(i) = H(i)- H(i-1)$ para calcular el \emph{PZM}. Así, el algoritmo se expresa de la siguiente forma:
+The algorithm operates by assessing the distance of a given value from the center of the data distribution, utilizing measures of variation such as standard deviation or interquartile range. It employs the Modified Z-score (MZS), which utilizes the Median Absolute Deviation (MAD). To address peaks \citep{WHITAKER2018, removing_with_Whitaker-Hayes}, a first-order derivative on the continuous data, denoted as $\nabla H(i) = H(i)- H(i-1)$, is computed to determine the MZS. The algorithm is expressed as follows:\\
+
+
+\begin{equation}
+	\lvert z(i)\rvert = \bigg| 0.6745 \cdot \frac{\nabla H(i) - M}{MAD}\bigg|
+\end{equation}
+
+%el criterio propuesto por la \emph{Sociedad Americana de Control de Calidad} es a partir de 3.5 , aunque de acuerdo con \cite{removing_with_Whitaker-Hayes}, el umbral dependerá de la serie de tiempo. El paso final es reemplazar por valores nulos y, en caso de ser necesario, es posible reemplazarlos a partir de una interpolación con los valores vecinos.
+The criterion proposed by the American Society for Quality Control is 3.5 and above, although, according to \cite{removing_with_Whitaker-Hayes}, the threshold will depend on the specific time series. The final step involves replacing extreme values with null values, and if needed, interpolation with neighboring values can be applied.
+%\subsection{Media Móvil / Mediana Móvil}
+
+
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+
+\label{S.5}
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}          ==>>  [#]
+%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
+%%   \citet{key}         ==>>  Author [#]
+
+%% References with bibTeX database:
+\clearpage
+\renewcommand\refname{References}
+\bibliographystyle{cas-model2-names}
+\bibliography{ref_article.bib}
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use model1-num-names.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.
